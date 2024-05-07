@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafting Site Plan | Matthew Cottrell</title>
+    <meta name="description" content="BYU-Idaho Student WDD130 course, box model example">
+    <meta name="author" content="Matthew Cottrell | matthew.cottrell10@gmail.com for any questions.">
+    <link rel="stylesheet" href="styles/box-model">
+</head>
+<body>
+	
+</body>
+</html>
 styles/box-model.css
 <main>
 	<div class="callout">
