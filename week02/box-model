@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafting Site Plan | Matthew Cottrell</title>
-    <meta name="description" content="BYU-Idaho Student WDD130 course, box model example">
+    <meta name="description" content="BYU-Idaho Student WDD130 course, box model">
     <meta name="author" content="Matthew Cottrell | matthew.cottrell10@gmail.com for any questions.">
     <link rel="stylesheet" href="styles/box-model">
 </head>
 <body>
-	
-</body>
-</html>
-styles/box-model.css
 <main>
 	<div class="callout">
 		<img src="https://imgs.search.brave.com/GL5j37h36qNrZB32VnI6vK33NtodJhNnI5M-Kf_Xi-E/rs:fit:473:610:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Y3L2Vl/LzEzL2Y3ZWUxMzY2/YWVjZmViYzhkMjkx/Y2MyNWYwNGMyYjNm/LmpwZw" alt="Paul the Apostle" loading="lazy" width="150">
@@ -24,4 +21,6 @@ styles/box-model.css
 		<cite>Philippians 4:11-13</cite>
 		<p></p>
 	</div>
+</body>
 </main>
+</html>
