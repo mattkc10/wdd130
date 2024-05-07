@@ -3,13 +3,13 @@ nav {
     padding: 10px;
 }
 
-nav a   {
+nav a {
     color: white;
     display: block;
     padding: 20px;
 }
 
-h1  {
+h1 {
     color: steelblue;
 }
 
@@ -18,10 +18,10 @@ img {
     height: auto;
     border: 1px solid steelblue;
     padding: 2px;
-    box-shadow: 0 0 30px gray;   
+    box-shadow: 0 0 30px gray;
 }
 
-p   {
+p {
     padding: 10px;
 }
 
@@ -32,7 +32,8 @@ main {
 aside {
     width: 20rem;
     margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* 1 */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* 1 */
     padding: 1rem;
     background-color: #eee;
     color: #136bcf;
@@ -42,7 +43,7 @@ aside {
 aside img {
     width: 200px;
     height: auto;
-    
+
 }
 
 footer {
