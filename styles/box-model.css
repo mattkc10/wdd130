@@ -1,31 +1,16 @@
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
 .callout {
-	width: 400px;
-	margin: 10px;
-	border: 1px solid rgba(0,0,0,.1);
-	padding: 15px;
-	background-color: #247;
-	color: #fff;
-}
-
-.callout img {
-	float: right;
-	margin: 0 0 10px 15px;
-	border: 1px solid #000;
-	padding: 3px;
-	background-color: #bbb;
-	width: 100px;
-	height: auto;
-	
-}
-
-blockquote {
-	margin: 0;
-}
-
-cite {
-	display: block;
-	border-top: 1px dotted #fff;
-	padding-top: 3px;
-	text-align: right;
-	font-size: smaller;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 15px;
+    background-color: #247;
+    color: #fff;
 }
