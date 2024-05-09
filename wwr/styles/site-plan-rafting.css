@@ -13,8 +13,8 @@ body {
     --accent1-color: #XXXXXX;
     --accent2-color: #XXXXXX;
   
-    --heading-font: '______', serif;
-    --paragraph-font: '______', serif;
+    --heading-font: '"Franklin Gothic Medium"', serif;
+    --paragraph-font: ''Arial Narrow'', serif;
   
     --nav-background-color: #XXXXXX;
     --nav-link-color: #XXXXXX;
@@ -23,9 +23,9 @@ body {
   }
 
   body {
-    f______: var(--paragraph-font);
-    m______: ______;
-    p______: ______;
+    font-family:  var("Franklin Gothic Medium");
+    max-width: 960px;
+    padding: 20px;
   }
  
   h1, h2, h3, h4, h5, h6 {
