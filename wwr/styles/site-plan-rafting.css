@@ -30,12 +30,12 @@ body {
  
   h1, h2, h3, h4, h5, h6 {
     font-family: var("Franklin Gothic Medium");
-    color: var(--4bb3fd);
+    color: var(#4bb3fd);
   }
   
   header {
     padding: 20px;
-    background-color: var(b2aa8e);
+    background-color: var( #b2aa8e);
   }
 
   p {
@@ -43,24 +43,24 @@ body {
   }
 
   nav {
-    background-color: var(7fafc6);
+    background-color: var(#7fafc6);
     font-size: 1.2rem;
     display: flex;
   }
   
   nav a {
     display: block;
-    color: var(-0c1b33);
+    color: var(#0c1b33);
     text-decoration: none;
     padding: 1rem;
   }
   
   nav a:link, nav a:visited {
-    color: var(0c1b33);
+    color: var(#0c1b33);
   }
   
   nav a:hover {
-    color: var(4bb3fd);
-    background-color: var(99adaa);
+    color: var(#4bb3fd);
+    background-color: var(#99adaa);
   }
   
