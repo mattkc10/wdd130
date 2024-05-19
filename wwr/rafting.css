@@ -1,0 +1,47 @@
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.callout {
+    width: 400px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 15px;
+    background-color: #247;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* Class Selectors */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+aside {
+    width: 20em;
+    text-align: center;
+  }
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+}
