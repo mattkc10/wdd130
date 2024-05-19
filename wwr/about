@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <nav>
+        <meta charset="utf-8">
+        <meta name="viewport" content="Someone from Utah who loves the outdoors who is passionate about rafting. Let me help you plan your rafting trip!">
+        <title>Matthew Cottrell | WDD 130</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <img src="images/river-logo.gif" alt="Welcome, to the rafting life." >
+        <a href="#">Home</a>
+        <a href="wwr/"> about.html</a>
+        <a href="wwr/"> trips.html</a>
+        <a href="wwr/"> <contact class="html"></contact></a>
+    </nav>    
+</head>
+
+<main>
+    <div class="hero">
+        <img src="images/backgroud_river.jpg">
+        <h1>Rafting Company Name</h1>
+        <article></article>
+            <img src="images/happy_rafting.jpg">
+            <p>Company Motto!</p>
+    </div>
+    <section>
+        <h2>History</h2>
+        <p>Lots of fun!</p>
+    </section>
+    <section>
+        <h2>Adventure Awaits You!</h2>
+        <img src="images/rafting1.jpg" alt="Exciting">
+        <img src="images/rafting2.jpg" alt="Fun">
+        <img src="images/rafting3.jpg" alt="Adventure">
+        <img src="images/rafting4.png" alt="Thrilling">
+        <img src="images/rafting5.jpg" alt="Memorable">
+    </section>
+</main>
+
+<footer>
+    <nav>
+    <p>&copy;2024 | Matthew Cottrell | USA</p>
+    <a href="x,com"> 
+        <img src="images/x.png" alt="X Website">
+    </a>
+    <a href="facebook.com">
+        <img src="images/facebook.png" alt="Facebook Website">
+    </a>
+    <a href="instagram.com"> 
+        <img src="images/instagram.png" alt="instagram Website">
+    </a>
+    </nav>
+</footer>
