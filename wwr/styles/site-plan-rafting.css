@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    max-width: 960px;
-    padding: 20px;
-}
-
 
 :root {
     --primary-color: #4bb3fd;
@@ -13,8 +7,8 @@ body {
     --accent1-color: #0fa3b1;
     --accent2-color: #00f5d4;
   
-    --heading-font: '"Franklin Gothic Medium"', serif;
-    --paragraph-font: ''Arial Narrow'', serif;
+    --heading-font: 'Nanum Gothic', sans-serif;
+    --paragraph-font: 'Nanum Gothic', sans-serif;
   
     --nav-background-color: #7fafc6;
     --nav-link-color: #0c1b33;
@@ -23,14 +17,14 @@ body {
   }
 
   body {
-    font-family:  var("Franklin Gothic Medium");
+    font-family:  var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
   }
  
   h1, h2, h3, h4, h5, h6 {
-    font-family: var("Franklin Gothic Medium");
-    color: var(#4bb3fd);
+    font-family: var(--heading-font);
+    color: var(--primary-color);
   }
   
   header {

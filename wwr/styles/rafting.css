@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+:root {
+  --primary-color: #4bb3fd;
+  --secondary-color: #ffb703;
+  --accent1-color: #0fa3b1;
+  --accent2-color: #00f5d4;
+
+  --heading-font: 'Nanum Gothic', sans-serif;
+  --paragraph-font: 'Nanum Gothic', sans-serif;
+
+  --nav-background-color: #072a3a;
+  --nav-link-color: #0c1b33;
+  --nav-hover-link-color: #0c1b33;
+  --nav-hover-background-color: #ffb703;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+p {
+  padding: 1em;
+}
+
+img {
+  width: 100%;
+}
+header, main, footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+ 
+  gap: 1em;
+}
+
+.logo {
+  width: 150px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--nav-background-color);
+}
+
+nav a {
+  color:#fff;
+  padding: 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0c1b33;
+
+}
+
+
+/* Class Selectors */
+
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+}
+.hero h1 {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  right: 20px;
+  background-color: #e3e3e37e;
+  padding: .5em 0;
+  text-align: center;
+}
+.hero article {
+  position:absolute;
+  top: 150px;
+  left: 20px;
+  right: 20px;
+  background-color: #e3e3e37e;
+}
+.hero article img {
+  width: 200px;
+  float: right;
+  padding: 1em 0 0 1em;
+}
+
+
+.adventure {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.adventure h2 {
+  grid-column: 1/-1;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  display: flex;
+  background-color: #3e3e3e;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.sociallinks {
+  background-color: unset;
+  justify-self: end;
+}
+
+.sociallinks img {
+  width: 55px;
+}
