@@ -103,6 +103,15 @@ nav a:hover {
   padding: 1em 0 0 1em;
 }
 
+.history {
+  align-self: space-around;
+}
+
+.history img {
+  display: flex;
+  top: 60px;
+  width: 250px;
+}
 
 .adventure {
   display: grid;
