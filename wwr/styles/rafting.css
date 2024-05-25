@@ -103,16 +103,32 @@ nav a:hover {
   padding: 1em 0 0 1em;
 }
 
-.history {
-  align-self: space-around;
+p {
+  padding: 10px;
+  color: #000;
 }
-
-.history img {
-  display: flex;
-  top: 60px;
-  width: 250px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+user agent stylesheet
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+img {
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .adventure {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

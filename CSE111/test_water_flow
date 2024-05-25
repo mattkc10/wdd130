@@ -1,47 +1,52 @@
-from CSE111/water_flow import tower_height, tank_height, height, pipe_diameter, pipe_length, friction_factor, fluid_velocity
-
-import pytest
 from pytest import approx
-import math
-
-def test_water_column_height(tower_height, tank_height):
-    assert water_column_height("0.0", "0.0") == "0.0"
-    assert water_column_height("0.0", "10.0") == "7.5"
-    assert water_column_height("25.0", "0.0") == "25.0"
-    assert water_column_height("48.3", "12.8") == "57.9"
-
-def test_pressure_gain_from_water_height(height, expected_pressure):
-    assert pressure_gain_from_water_height("0.0", "0.000")  == approx(0.001)
-    assert pressure_gain_from_water_height("30.2", "295.628") == approx(0.001)
-    assert pressure_gain_from_water_height("50.0", "489.450") == approx(0.001)
-
-def test_pressure_loss_from_pipe(pipe_diameter, pipe_length, friction_factor, fluid_velocity, expected_pressure_loss):
-    assert pressure_loss_from_pipe("0.048692", "0.00", "0.018", "1.75", "0.000") == approx(0.001)
-    assert pressure_loss_from_pipe("0.048692", "200.00", "0.000", "1.75", "0.000") == approx(0.001)
-    assert pressure_loss_from_pipe("0.048692", "200.00", "0.018", "0.00", "0.000") == approx(0.001)
-    assert pressure_loss_from_pipe("0.048692", "200.00", "0.018", "1.75", "-113.008") == approx(0.001)
-    assert pressure_loss_from_pipe("0.048692", "200.00", "0.018", "1.65", "-100.462") == approx(0.001)
-    assert pressure_loss_from_pipe("0.286870", "1000.00", "0.013", "1.65", "-61.576") == approx(0.001)
-    assert pressure_loss_from_pipe("0.286870", "1800.75", "0.013", "1.65", "-110.884") == approx(0.001)
-
-def test_pressure_loss_from_fittings(fluid_velocity, quantity_fittings, expected_pressure_loss):
-    assert pressure_loss_from_fittings("0.00", "3", "0.000") == approx(0.001)
-    assert pressure_loss_from_fittings("1.65", "0", "0.000") == approx(0.001)
-    assert pressure_loss_from_fittings("1.65", "2", "-0.109") == approx(0.001)
-    assert pressure_loss_from_fittings("1.75", "2", "-0.122") == approx(0.001)
-    assert pressure_loss_from_fittings("1.75", "5", "-0.306") == approx(0.001)
-
-def reynolds_number(hydraulic_diameter, fluid_velocity, expected_reynolds_number):
-    assert reynolds_number("0.048692", "0.00", "0") == approx(1)
-    assert reynolds_number("0.048692", "1.65", "80069") == approx(1)
-    assert reynolds_number("0.048692", "1.75", "84922") == approx(1)
-    assert reynolds_number("0.286870", "1.65", "471729") == approx(1)
-    assert reynolds_number("0.286870", "1.75", "500318") == approx(1)
-
-def test_pressure_loss_from_pipe_reduction(larger_diameter,
-        fluid_velocity, reynolds_number, smaller_diameter, expected_pressure_loss):
-    assert pressure_loss_from_pipe_reduction("0.28687", "0.00", "1", "0.048692", "0.000") == approx(0.001)
-    assert pressure_loss_from_pipe_reduction("0.28687", "1.65", "471729", "0.048692", "-163.744") == approx(0.001)
-    assert pressure_loss_from_pipe_reduction("0.28687", "1.75", "500318", "0.048692", "-184.182") == approx(0.001)
-
-pytest.main(["-v", "--tb=line", "-rN", __file__])
+import pytest
+ 
+from water_flow import water_column_height, pressure_gain_water_height, pressure_loss_from_pipe, pressure_loss_from_fittings
+ 
+ 
+def test_water_column_height():
+    """Function must call water_column_height at least four times
+    to verify that it is working correctly"""
+    assert water_column_height(0.0, 0.0) == approx(0.0, abs=0.001)
+    assert water_column_height(0.0, 10.0) == approx(7.5, abs=0.001)
+    assert water_column_height(25.0, 0.0) == approx(25.0, abs=0.001)
+    assert water_column_height(48.3, 12.8) == approx(57.9, abs=0.001)
+ 
+ 
+def test_pressure_gain_water_height():
+    """This test function must call pressure_gain_water_height at
+    least three times to verify that it is working correctly."""
+ 
+    assert pressure_gain_water_height(0.0) == approx(0.0, abs=0.001)
+    assert pressure_gain_water_height(30.2) == approx(295.628, abs=0.001)
+    assert pressure_gain_water_height(50.0) == approx(489.450, abs=0.001)
+ 
+ 
+def test_pressure_loss_from_pipe():
+    """must call pressure_loss_from_pipe at least
+    seven times to verify that it is working correctly"""
+ 
+    assert pressure_loss_from_pipe(0.048692, 0.00, 0.018, 1.75) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_pipe(0.048692, 200.00, 0.000, 1.75) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_pipe(0.048692, 200.00, 0.018, 0.00) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_pipe(0.048692, 200.00, 0.018, 1.75) == approx(-113.008, abs=0.001)
+    assert pressure_loss_from_pipe(0.048692, 200.00, 0.018, 1.65) == approx(-100.462, abs=0.001)
+    assert pressure_loss_from_pipe(0.286870, 1000.00, 0.013, 1.65) == approx(-61.576, abs=0.001)
+    assert pressure_loss_from_pipe(0.286870, 1800.75, 0.013, 1.65) == approx(-110.884, abs=0.001)
+ 
+ 
+def test_pressure_loss_from_fittings():
+    """Function must call pressure_loss_from_fittings
+    at least five times to verify that it is working correctly"""
+ 
+    assert pressure_loss_from_fittings(0.000, 3) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_fittings(1.0, 0) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_fittings(1.0, 1) == approx(-0.040, abs=0.001)
+    assert pressure_loss_from_fittings(1.0, 2) == approx(-0.080, abs=0.001)
+    assert pressure_loss_from_fittings(1.0, 3) == approx(-0.120, abs=0.001)
+ 
+ 
+# Call the main function that is part of pytest so that the
+# computer will execute the test functions in this file.
+if __name__ == "__main__":
+    pytest.main(["-v", "--tb=line", "-rN", "test_water_flow.py"])
