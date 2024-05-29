@@ -132,7 +132,7 @@ img {
 
 .history {
   display: grid;
-  grid-template-columns: 1/1;
+  grid-template-columns: 0 1 0;
 }
 
 .history p {
