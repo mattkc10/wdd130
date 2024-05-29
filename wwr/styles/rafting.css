@@ -80,6 +80,7 @@ nav a:hover {
 }
 .hero img {
   width: 100%;
+  height: fit-content;
 }
 .hero h1 {
   position: absolute;
@@ -132,7 +133,15 @@ img {
 
 .history {
   display: grid;
-  grid-template-columns: 0 1 0;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 2em;
+  margin: 50px 0;
+}
+
+.history h2 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 1em 0;
 }
 
 .history p {
